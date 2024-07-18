@@ -12,7 +12,7 @@ import router from '@adonisjs/core/services/router'
 
 router
   .group(() => {
-    router.get('/register', [RegisterController, 'show']).as('register')
+    router.get('/register', [RegisterController, 'show']).as('register.show')
   })
   .prefix('/auth')
   .as('auth')
