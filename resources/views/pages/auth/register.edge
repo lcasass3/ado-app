@@ -34,7 +34,9 @@
         </div>
 
         <div class="mt-8">
-          <form action="#">
+          <form method="POST" action="{{ route('auth.register.store') }}">
+            {{ csrfField() }}
+
             <div class="flex flex-col mb-5">
               <label
                 for="email"
@@ -59,9 +61,9 @@
               </div>
 
                 <input
-                  id="name"
+                  id="fullName"
                   type="text"
-                  name="name"
+                  name="fullName"
                   class="
                     text-sm
                     placeholder-gray-500
