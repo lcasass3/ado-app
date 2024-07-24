@@ -13,8 +13,9 @@ import router from '@adonisjs/core/services/router'
 router
   .group(() => {
     router.get('/register', [RegisterController, 'show']).as('register.show')
+    router.post('/register', [RegisterController, 'store']).as('register.store')
   })
   .prefix('/auth')
   .as('auth')
 
-router.on('/').render('pages/home')
+router.on('/').render('pages/home').as('home')

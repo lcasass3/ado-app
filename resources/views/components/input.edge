@@ -1,0 +1,24 @@
+@let (defaultStyles = "text-sm placeholder-gray-500 pl-10 pr-4 rounded-xl border border-gray-400 w-full py-2 focus:outline-none focus:border-primary-default")
+@let (iconStyle = "inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400")
+
+@let (removeExistingStyles = $props.has('class'))
+
+@if($props.has('label'))
+    <label for="fullName" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
+        {{ $props.get('label') }}
+    </label>
+@end
+
+<div class="relative">
+    @if($props.has('icon'))
+        <div class="{{ iconStyle }}">
+            @svg($props.get('icon'))
+        </div>
+    @end
+
+    <input {{ 
+        $props.mergeUnless(removeExistingStyles, { class: defaultStyles })
+        .except(['removeExistingStyles'])
+        .toAttrs() 
+    }} />
+</div>

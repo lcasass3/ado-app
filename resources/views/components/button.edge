@@ -1,0 +1,14 @@
+@let(primaryStyle = "flex mt-2 items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary-default hover:bg-primary-dark rounded-xl py-2 w-full transition duration-150 ease-in")
+@let(secondaryStyle = "flex mt-2 items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-secondary-default hover:bg-secondary-dark rounded-xl py-2 w-full transition duration-150 ease-in")
+
+@let (isPrimary = $props.get('isPrimary'))
+@let (isSecondary = $props.get('isSecondary'))
+
+<button {{ 
+    $props.mergeIf(isPrimary, { class: primaryStyle })
+    .mergeIf(isSecondary, { class: secondaryStyle })
+    .except(['isPrimary', 'isSecondary'])
+    .toAttrs() 
+}}>
+        {{ await $slots.main() }}
+</button>
