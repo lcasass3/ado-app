@@ -1,0 +1,12 @@
+{
+  "shared": {
+    "fields": {
+      "fullName": "nombre completo",
+      "email": "correo electrónico",
+      "password": "contraseña"
+    },
+    "messages": {
+      "required": "El campo {field} es obligatorio."
+    }
+  }
+}
