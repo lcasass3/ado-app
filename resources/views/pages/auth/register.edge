@@ -25,14 +25,14 @@
     }
 ])
 
-@layout.app({ title: 'Registro' })
+@layout({ title: 'Registro' })
     <div class="min-h-screen flex flex-col items-center justify-center bg-background">
       @card()
         <h1 class="font-semibold self-center text-xl sm:text-3xl text-gray-800">
           Crea una cuenta
         </h1>
-        <h2 class="mt-2 self-center text-sm text-gray-800">
-          Registrate para empezar a usar la aplicación
+        <h2 class="mt-2 self-center text-center text-sm text-gray-800">
+          Registrarte es la primera tarea para comenzar a usar la aplicación
         </h2>
 
         <div class="mt-8">
@@ -70,27 +70,14 @@
       @end
 
       <div class="flex justify-center items-center mt-6">
-        <a
+        <span
           href="#"
           target="_blank"
-          class="
-            inline-flex
-            items-center
-            text-gray-700
-            font-medium
-            text-xs text-center
-          "
+          class="inline-flex items-center text-gray-700 font-medium text-xs text-center"
         >
-          <span class="ml-2">
-            Ya tienes una cuenta?
-            <a
-              href="#"
-              class="text-xs text-accent-default hover:text-accent-dark hover:underline ml-2 font-semibold"
-              >
-              Iniciar sesión
-            </a>
-          </span>
-        </a>
+          Ya tienes una cuenta?
+          @!link({ text: 'Inicia sesión', href: "#" })
+        </span>
       </div>
     </div>
 @end
