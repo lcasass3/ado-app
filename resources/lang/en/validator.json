@@ -1,0 +1,10 @@
+{
+  "shared": {
+    "fields": {
+      "fullName": "full name"
+    },
+    "messages": {
+      "required": "The {field} is required."
+    }
+  }
+}

@@ -7,11 +7,12 @@ export default class RegisterController {
     return view.render('pages/auth/register')
   }
 
-  async store({ request, response }: HttpContext) {
-    const data = await request.validateUsing(registerValidator)
+  async store({ request, response, i18n }: HttpContext) {
+    const data = await request.validateUsing(registerValidator, {
+      messagesProvider: i18n.createMessagesProvider(),
+    })
 
-    const user = await User.create(data)
-    console.log(user.serialize())
+    await User.create(data)
 
     return response.redirect().toRoute('home')
   }

@@ -37,7 +37,7 @@ router.use([
   () => import('@adonisjs/session/session_middleware'),
   () => import('@adonisjs/shield/shield_middleware'),
   () => import('@adonisjs/auth/initialize_auth_middleware'),
-  () => import('#middleware/detect_user_locale_middleware')
+  () => import('#middleware/detect_user_locale_middleware'),
 ])
 
 /**
@@ -47,4 +47,5 @@ router.use([
 export const middleware = router.named({
   guest: () => import('#middleware/guest_middleware'),
   auth: () => import('#middleware/auth_middleware'),
+  i18n: () => import('#middleware/detect_user_locale_middleware'),
 })
