@@ -1,0 +1,20 @@
+{
+  "create-account": "Crear cuenta",
+  "register-message": "Registrarte es la primera tarea para comenzar a usar la aplicación",
+  "register": "Registrarse",
+  "already-have-account": "¿Ya tienes una cuenta?",
+
+  "login": "Iniciar sesión",
+  "login-message": "Inicia sesión en tu cuenta",
+
+  "full-name": "Nombre completo",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+
+  "enter-full-name": "Ingresa tu nombre completo",
+  "enter-email": "Ingresa tu correo electrónico",
+  "enter-password": "Ingresa tu contraseña",
+
+  "welcome": "Bienvenido a nuestra aplicación { name }",
+  "goodbye": "Adiós, { name }"
+}

@@ -1,0 +1,20 @@
+{
+  "create-account": "Create Account",
+  "register-message": "Register now to get access to all our features",
+  "register": "Register",
+  "already-have-account": "Already have an account?",
+
+  "login": "Login",
+  "login-message": "Login to your account",
+
+  "full-name": "Full Name",
+  "email": "Email",
+  "password": "Password",
+
+  "enter-full-name": "Enter your full name",
+  "enter-email": "Enter your email",
+  "enter-password": "Enter your password",
+
+  "welcome": "Welcome to our application { name }",
+  "goodbye": "Goodbye, { name }"
+}

@@ -1,26 +1,26 @@
 @let(inputs = [
     {
-        label: 'Nombre completo',
+        label: t('messages.full-name'),
         id: 'fullName',
         name: 'fullName',
         type: 'text',
-        placeholder: 'Ingresa tu nombre completo',
+        placeholder: t('messages.enter-full-name'),
         icon: 'heroicons:user'
     },
     {
-        label: 'Correo electrónico',
+        label: t('messages.email'),
         id: 'email',
         name: 'email',
         type: 'email',
-        placeholder: 'Ingresa tu correo electrónico',
+        placeholder: t('messages.enter-email'),
         icon: 'heroicons:envelope'
     },
     {
-        label: 'Contraseña',
+        label: t('messages.password'),
         id: 'password',
         name: 'password',
         type: 'password',
-        placeholder: 'Ingresa tu contraseña',
+        placeholder: t('messages.enter-password'),
         icon: 'heroicons:key'
     }
 ])
@@ -29,24 +29,24 @@
     <div class="min-h-screen flex flex-col items-center justify-center bg-background">
       @card()
         <h1 class="font-semibold self-center text-xl sm:text-3xl text-gray-800">
-          Crea una cuenta
+          {{ t('messages.create-account') }}
         </h1>
         <h2 class="mt-2 self-center text-center text-sm text-gray-800">
-          Registrarte es la primera tarea para comenzar a usar la aplicación
+          {{ t('messages.register-message') }}
         </h2>
 
         <div class="mt-8">
-          <form method="POST" action="{{ route('auth.register.store') }}">
-            {{ csrfField() }}
-
-            @each(input in inputs)
+          @form({ method: "POST", 
+            action: route('auth.register.store'),
+          })
+            @each((input, idx) in inputs)
               <div class="flex flex-col mb-5">
                 @!input({ label: input.label, 
                   id: input.id, 
                   name: input.name, 
                   type: input.type, 
                   placeholder: input.placeholder, 
-                  icon: input.icon 
+                  icon: input.icon,
                 })
 
                 @inputError(input.name)
@@ -61,11 +61,11 @@
 
             <div class="flex w-full">
               @button({ isPrimary: true, type: 'submit' })
-                Registrarse
+                {{ t('messages.register') }}
               @end
             </div>
 
-          </form>
+          @end
         </div>
       @end
 
@@ -75,8 +75,8 @@
           target="_blank"
           class="inline-flex items-center text-gray-700 font-medium text-xs text-center"
         >
-          Ya tienes una cuenta?
-          @!link({ text: 'Inicia sesión', href: "#" })
+          {{ t('messages.already-have-account') }}
+          @!link({ text: t('messages.login'), href: "#" })
         </span>
       </div>
     </div>
