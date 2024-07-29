@@ -55,6 +55,7 @@
                   type: input.type, 
                   placeholder: input.placeholder, 
                   icon: input.icon,
+                  value: old(input.name) || ''
                 })
 
                 @inputError(input.name)
