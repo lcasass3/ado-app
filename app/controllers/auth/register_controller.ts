@@ -8,11 +8,11 @@ export default class RegisterController {
   }
 
   async store({ request, response, i18n }: HttpContext) {
-    const data = await request.validateUsing(registerValidator, {
+    const { confirmPassword, ...rest } = await request.validateUsing(registerValidator, {
       messagesProvider: i18n.createMessagesProvider(),
     })
 
-    await User.create(data)
+    await User.create(rest)
 
     return response.redirect().toRoute('home')
   }

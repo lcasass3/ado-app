@@ -14,6 +14,7 @@
   "enter-full-name": "Ingresa tu nombre completo",
   "enter-email": "Ingresa tu correo electrónico",
   "enter-password": "Ingresa tu contraseña",
+  "confirm-password": "Confirmar contraseña",
 
   "welcome": "Bienvenido a nuestra aplicación { name }",
   "goodbye": "Adiós, { name }"

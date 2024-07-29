@@ -3,10 +3,15 @@
     "fields": {
       "fullName": "nombre completo",
       "email": "correo electrónico",
-      "password": "contraseña"
+      "password": "contraseña",
+      "confirmPassword": "confirmar contraseña"
     },
     "messages": {
-      "required": "El campo {field} es obligatorio."
+      "required": "El campo {field} es obligatorio.",
+      "minLength": "El campo {field} debe tener al menos {min} caracteres.",
+      "maxLength": "El campo {field} no debe tener más de {max} caracteres.",
+      "sameAs": "El campo {field} debe ser igual a {otherField}.",
+      "database.unique": "El campo {field} ya ha sido tomado."
     }
   }
 }
