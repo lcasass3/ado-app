@@ -1,54 +1,38 @@
-@let(inputs = [
+@let (inputs = [
     {
-      label: t('messages.full-name'),
-      id: 'fullName',
-      name: 'fullName',
-      type: 'text',
-      placeholder: t('messages.enter-full-name'),
-      icon: 'heroicons:user'
+        label: t('messages.email'),
+        id: 'email',
+        name: 'email',
+        type: 'email',
+        placeholder: t('messages.email'),
+        icon: 'heroicons:envelope'
     },
     {
-      label: t('messages.email'),
-      id: 'email',
-      name: 'email',
-      type: 'email',
-      placeholder: t('messages.enter-email'),
-      icon: 'heroicons:envelope'
-    },
-    {
-      label: t('messages.password'),
-      id: 'password',
-      name: 'password',
-      type: 'password',
-      placeholder: t('messages.enter-password'),
-      icon: 'heroicons:key'
-    },
-    {
-      label: t('messages.confirm-password'),
-      id: 'confirmPassword',
-      name: 'confirmPassword',
-      type: 'password',
-      placeholder: t('messages.enter-password'),
-      icon: 'heroicons:key'
+        label: t('messages.password'),
+        id: 'password',
+        name: 'password',
+        type: 'password',
+        placeholder: t('messages.password'),
+        icon: 'heroicons:finger-print'
     }
 ])
 
-@layout({ title: t('messages.register') })
+@layout({ title: t('messages.login') })
     <div class="flex flex-col items-center justify-center h-screen">
       @card()
         <h1 class="font-semibold self-center text-xl sm:text-3xl text-gray-800">
-          {{ t('messages.create-account') }}
+          {{ t('messages.login') }}
         </h1>
         <h2 class="mt-2 self-center text-center text-sm text-gray-800">
-          {{ t('messages.register-message') }}
+          {{ t('messages.login-message') }}
         </h2>
 
-        <div class="mt-8">
+        <div class="mt-3">
           @form({ method: "POST", 
             action: route('auth.register.store'),
           })
             @each(input in inputs)
-              <div class="flex flex-col mb-5">
+              <div class="flex flex-col mt-5">
                 @!input({ label: input.label, 
                   id: input.id, 
                   name: input.name, 
@@ -67,21 +51,28 @@
                 @end
               </div>
             @end  
+            <span class="inline-flex items-center text-gray-800 font-normal text-xs text-center">
+                {{ t('messages.forgot-password') }}
+                @!link({ 
+                    text: t('messages.recover-password'), 
+                    href: '#',
+                    class: 'text-xs text-primary-default/70 hover:text-primary-dark/70 hover:underline ml-2 font-medium' 
+                })
+            </span>
 
-            <div class="flex w-full">
+            <div class="flex w-full mt-5">
               @button({ isPrimary: true, type: 'submit' })
-                {{ t('messages.register') }}
+                {{ t('messages.login') }}
               @end
             </div>
-
           @end
         </div>
       @end
 
       <div class="flex justify-center items-center mt-6">
         <span class="inline-flex items-center text-gray-700 font-medium text-xs text-center">
-          {{ t('messages.already-have-account') }}
-          @!link({ text: t('messages.login'), href: route('auth.login.show') })
+          {{ t('messages.dont-have-account') }}
+          @!link({ text: t('messages.create-account'), href: route('auth.register.show') })
         </span>
       </div>
     </div>

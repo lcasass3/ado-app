@@ -1,5 +1,9 @@
 @let (styles = "text-xs text-accent-default hover:text-accent-dark hover:underline ml-2 font-semibold")
+@let (removeExistingStyles = $props.has('class'))
 
-<a {{ $props.merge({ class: styles }).except(['text']).toAttrs() }} >
+<a {{ $props.mergeUnless(removeExistingStyles, { class: styles })
+    .except(['text', 'removeExistingStyles'])
+    .toAttrs() }} 
+>
     {{ $props.get('text') }}
 </a>

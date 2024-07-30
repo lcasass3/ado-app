@@ -6,6 +6,9 @@
 
   "login": "Login",
   "login-message": "Login to your account",
+  "forgot-password": "Forgot Password?",
+  "recover-password": "Recover Password",
+  "dont-have-account": "Don't have an account?",
 
   "full-name": "Full Name",
   "email": "Email",

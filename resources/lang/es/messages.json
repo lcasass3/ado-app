@@ -6,6 +6,9 @@
 
   "login": "Iniciar sesión",
   "login-message": "Inicia sesión en tu cuenta",
+  "forgot-password": "¿Olvidaste tu contraseña?",
+  "recover-password": "Recuperar contraseña",
+  "dont-have-account": "¿No tienes una cuenta?",
 
   "full-name": "Nombre completo",
   "email": "Correo electrónico",
