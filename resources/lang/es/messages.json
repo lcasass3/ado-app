@@ -19,6 +19,8 @@
   "enter-password": "Ingresa tu contraseña",
   "confirm-password": "Confirmar contraseña",
 
+  "verify-email": "Verifica tu dirección de correo electrónico",
+
   "welcome": "Bienvenido a nuestra aplicación { name }",
   "goodbye": "Adiós, { name }"
 }
