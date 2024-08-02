@@ -24,4 +24,10 @@ export default class User extends compose(BaseModel, AuthFinder) {
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
+
+  @column()
+  declare isEmailVerified: boolean
+
+  @column()
+  declare emailVerificationToken: string | null
 }
