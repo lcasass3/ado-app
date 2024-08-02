@@ -20,6 +20,8 @@
   "confirm-password": "Confirmar contraseña",
 
   "verify-email": "Verifica tu dirección de correo electrónico",
+  "check-email": "Antes de continuar, por favor revisa tu correo electrónico para encontrar el enlace de verificación.",
+  "verify-email-message": "Un nuevo enlace de verificación ha sido enviado a tu dirección de correo electrónico.",
 
   "welcome": "Bienvenido a nuestra aplicación { name }",
   "goodbye": "Adiós, { name }"

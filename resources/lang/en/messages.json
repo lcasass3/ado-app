@@ -20,6 +20,8 @@
   "confirm-password": "Confirm your password",
 
   "verify-email": "Verify your email address",
+  "check-email": "Before proceeding, please check your email for a verification link.",
+  "verify-email-message": "A fresh verification link has been sent to your email address.",
 
   "welcome": "Welcome to our application { name }",
   "goodbye": "Goodbye, { name }"
