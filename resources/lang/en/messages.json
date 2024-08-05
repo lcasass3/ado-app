@@ -19,9 +19,10 @@
   "enter-password": "Enter your password",
   "confirm-password": "Confirm your password",
 
-  "verify-email": "Verify your email address",
+  "verify-email": "Verify email",
   "check-email": "Before proceeding, please check your email for a verification link.",
   "verify-email-message": "A fresh verification link has been sent to your email address.",
+  "email-verified": "Your email has been successfully verified. You can safely close this tab or:",
 
   "welcome": "Welcome to our application { name }",
   "goodbye": "Goodbye, { name }"
