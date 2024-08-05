@@ -1,0 +1,14 @@
+@layout({ title: t("messages.verify-email") })
+    <div class="flex flex-col items-center justify-start h-screen p-5">
+        @card() 
+            <h1 class="text-xl md:text-3xl font-bold mb-4 text-center">Email Verified!</h1>
+            <p class="text-sm md:text-md text-center mb-5">{{ t('messages.email-verified') }}</p>
+            @link({ href: route('auth.login.show'), removeExistingStyles: true }) 
+                @!button({ isPrimary: true, 
+                    text: t('messages.login'),
+                    type: 'button' 
+                })
+            @end
+        @end
+    </div>
+@end
