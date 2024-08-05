@@ -10,5 +10,5 @@
     .except(['isPrimary', 'isSecondary'])
     .toAttrs() 
 }}>
-        {{{ await $slots.main() }}}
+        {{{ $props.get('text') ?? await $slots.main() }}}
 </button>
